@@ -1,0 +1,15 @@
+<%- include('partials/header') -%>
+    <main id="characters">
+        <% datos.forEach(personajes => { %>
+        <article class="character">
+			<img src="<%= personajes.image %>" alt="">
+			<h2><%= personajes.name %></h2>
+			<div>
+			  <p><%= personajes.species %></p>
+			  <p class="<%= personajes.status.toLowerCase() %>"></p>
+			</div>
+			<a href="/detalle/<%= personajes.id %>">Ver detalle</a>
+		</article>
+		<% }) %>
+    </main>
+<%- include('partials/footer') -%>

@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+    <main id="character">
+        <article class="character">
+            <img src="<%= datos.image %>">
+            <h2><%= datos.name %></h2>
+            <p class="data"><span>Origen:</span> <%= datos.origin.name %></p>
+            <p class="data"><span>Locación Actual:</span> <%= datos.location.name %></p>
+            <div>
+              <p class="data"><span>Especie:</span> <%= datos.species %></p>
+              <p class="<%= datos.status.toLowerCase() %>"><%= datos.status %></p>
+            </div>
+        </article>
+    </main>
+<%- include('partials/footer') -%>
